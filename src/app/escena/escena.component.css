@@ -35,7 +35,6 @@ p {
 }
 
 ul {
-  list-style-type: none;
   padding: 0;
 }
 
@@ -44,10 +43,14 @@ ul li {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #c2bfbf;
   margin-right: 5px;
 }
 
 ul li.active {
   background-color: black;
+}
+
+.disable-selec {
+  user-select: none;
 }

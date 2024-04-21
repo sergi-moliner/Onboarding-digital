@@ -1,4 +1,4 @@
-<div class="container custom-container mt-5 pt-5 shadow rounded-5" [style.background-color]="backgrounds[currentStep].color">
+<div class="container custom-container mt-5 pt-5 shadow rounded-5 disable-selec" [style.background-color]="backgrounds[currentStep].color">
   <div class="row img-container">
     <div class="col-12 mb-5 pb-2">
       <img [src]="backgrounds[currentStep].image" alt="Time Management" class="mt-4 pt-5 mb-5 pb-3 img-fluid"/>
@@ -11,7 +11,7 @@
         <p>{{ frases[currentStep].description }}</p>
       </div>
       <ul>
-        <li *ngFor="let frase of frases; let i = index" [class.active]="i === currentStep"></li>
+        <li *ngFor="let frase of frases; let i = index" [class.active]="i === currentStep" (click)="selectSlide(i)"></li>
       </ul>
       <button type="button" class="circular-button mb-4" (click)='next()' [hidden]="currentStep === frases.length - 1">
         <i class="bi bi-arrow-right arrow"></i>

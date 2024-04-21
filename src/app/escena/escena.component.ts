@@ -29,4 +29,7 @@ export class EscenaComponent {
       this.currentStep--;
     }
   }
+  selectSlide(i : number){
+    this.currentStep = i;
+  }
 }
