@@ -1,17 +1,23 @@
-<div class="container custom-container mt-5 pt-5 shadow rounded-5 ">
+<div class="container custom-container mt-5 pt-5 shadow rounded-5" [style.background-color]="backgrounds[currentStep].color">
   <div class="row img-container">
     <div class="col-12 mb-5 pb-2">
-      <img src="../../assets/images/time_managment.svg" alt="Time Management" class="mt-4 pt-5 mb-5 pb-3 img-fluid"/>
+      <img [src]="backgrounds[currentStep].image" alt="Time Management" class="mt-4 pt-5 mb-5 pb-3 img-fluid"/>
     </div>
   </div>
-  <div class="row frase-container">
-    <div class="col-12 mt-5 ms-3">
-      <div *ngFor="let frase of frases">
-        <h3>{{ frase.title }}</h3>
-        <p>{{ frase.description }}</p>
+  <div class="row frase-content">
+    <div class="col-12 mt-5 ms-3 pe-4">
+      <div>
+        <h3>{{ frases[currentStep].title }}</h3>
+        <p>{{ frases[currentStep].description }}</p>
       </div>
-      <button type="button" class="circular-button mb-4">
+      <ul>
+        <li *ngFor="let frase of frases; let i = index" [class.active]="i === currentStep"></li>
+      </ul>
+      <button type="button" class="circular-button mb-4" (click)='next()' [hidden]="currentStep === frases.length - 1">
         <i class="bi bi-arrow-right arrow"></i>
+      </button>
+      <button type="button" class="circular-button mb-4" (click)='prev()' [hidden]="currentStep === 0">
+        <i class="bi bi-arrow-left arrow"></i>
       </button>
     </div>
   </div>

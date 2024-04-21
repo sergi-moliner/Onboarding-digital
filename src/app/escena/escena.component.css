@@ -5,7 +5,7 @@
   background-color:#0d9ea6;
 }
 
-.frase-container {
+.frase-content {
   background-color:white;
   border-radius: 0 0 30px 30px;
 
@@ -32,4 +32,22 @@ p {
 }
 .arrow {
   color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 5px;
+}
+
+ul li.active {
+  background-color: black;
 }
