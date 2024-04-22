@@ -1,27 +1,45 @@
-# OnboardingDigitalApp
+# 🚀 Onboarding Digital Application
+
+This project is a web application designed to create a digital onboarding experience. It displays onboarding steps with accompanying messages and allows users to navigate through them.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
 
-## Development server
+## 🛠️ Setup Instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To set up and run this project locally, follow these steps:
 
-## Code scaffolding
+1. Clone the project repository:
+```
+https://github.com/sergi-moliner/Sprint-5
+```
+2. Navigate to the project directory.
+
+3. Open the project in your preferred code editor.
+
+4. Start a local development server or open the `index.html` file in a web browser to view the application.
+
+## 📦 Installation
+
+To edit the code, you need to install the necessary Node.js modules. Run the following command:
+```
+npm install
+```
+## 🖥️ Development Server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## 🏗️ Code Generation
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
+## 🧪 Running Unit Tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## 📈 Running End-to-End Tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## 📦 Build
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.

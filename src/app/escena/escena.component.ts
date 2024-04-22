@@ -1,17 +1,25 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { iStep } from '../istep.interface';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-escena',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './escena.component.html',
-  styleUrl: './escena.component.css'
+  styleUrl: './escena.component.css',
+  animations: [
+    trigger('bounce', [
+      transition('* => *', [
+        animate('350ms ease-out', style({ transform: 'translateY(-10px)' })),
+        animate('350ms ease-out', style({ transform: 'translateY(0)' }))
+      ])
+    ])
+  ]
 })
 export class EscenaComponent {
   @Input() frases: iStep[] = [];
-  currentStep : number = 0;
+  currentStep: number = 0;
 
   backgrounds: { image: string, color: string }[] = [
     { image: '../../assets/images/time_managment.svg', color: '#0d9ea6' },
@@ -29,7 +37,7 @@ export class EscenaComponent {
       this.currentStep--;
     }
   }
-  selectSlide(i : number){
+  selectSlide(i: number): void {
     this.currentStep = i;
   }
 }
