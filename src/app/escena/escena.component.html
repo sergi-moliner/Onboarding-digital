@@ -15,11 +15,11 @@
         <li [class.active]="1 === currentStep" (click)="selectSlide(1)"></li>
         <li [class.active]="2 === currentStep" (click)="selectSlide(2)"></li>
       </ul>
-      <button type="button" class="circular-button mb-4" (click)='next()' [hidden]="currentStep === frases.length - 1">
-        <i class="bi bi-arrow-right arrow"></i>
+      <button type="button" class="circular-button-right mb-4" (click)='next()' [hidden]="currentStep === frases.length - 1">
+        <i class="bi bi-arrow-right arrow-right"></i>
       </button>
-      <button type="button" class="circular-button mb-4" (click)='prev()' [hidden]="currentStep === 0">
-        <i class="bi bi-arrow-left arrow"></i>
+      <button type="button" class="circular-button-left mb-4" (click)='prev()' [hidden]="currentStep === 0">
+        <i class="bi bi-arrow-left arrow-left"></i>
       </button>
     </div>
   </div>

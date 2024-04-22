@@ -20,7 +20,7 @@ p {
   color: #757575;
 }
 
-.circular-button {
+.circular-button-right {
   background-color: black;
   border: none;
   border-radius: 50%;
@@ -29,7 +29,19 @@ p {
   float: right;
   margin-right: 30px;
 }
-.arrow {
+
+.circular-button-left{
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-right: 30px;
+}
+.arrow-left {
+  color: black;
+}
+.arrow-right {
   color: white;
 }
 
@@ -43,11 +55,15 @@ ul li {
   height: 10px;
   border-radius: 50%;
   background-color: #c2bfbf;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 ul li.active {
   background-color: black;
+  width: 25px;
+  height: 10px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .disable-selec {
